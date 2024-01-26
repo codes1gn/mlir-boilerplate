@@ -11,6 +11,6 @@
 
 #include "mlir/IR/Dialect.h"
 
-#include "Ragdoll/RagdollOpsDialect.h.inc"
+#include "Dialect/Ragdoll/RagdollDialect.h.inc"
 
 #endif // RAGDOLL_RAGDOLLDIALECT_H

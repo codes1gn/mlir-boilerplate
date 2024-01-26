@@ -4,7 +4,7 @@ set(LIBS
         ${dialect_libs}
         ${conversion_libs}
         MLIROptLib
-        MLIRRagdoll
+        RagdollIR
         )
 add_llvm_executable(ragdoll-opt ragdoll-opt.cpp)
 

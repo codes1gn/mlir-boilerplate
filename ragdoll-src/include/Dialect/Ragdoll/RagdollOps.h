@@ -16,6 +16,6 @@
 #include "mlir/Interfaces/SideEffectInterfaces.h"
 
 #define GET_OP_CLASSES
-#include "Ragdoll/RagdollOps.h.inc"
+#include "Dialect/Ragdoll/RagdollOps.h.inc"
 
 #endif // RAGDOLL_RAGDOLLOPS_H

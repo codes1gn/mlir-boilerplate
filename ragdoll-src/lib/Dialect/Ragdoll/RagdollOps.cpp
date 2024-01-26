@@ -6,9 +6,9 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "Ragdoll/RagdollOps.h"
-#include "Ragdoll/RagdollDialect.h"
+#include "Dialect/Ragdoll/RagdollOps.h"
+#include "Dialect/Ragdoll/RagdollDialect.h"
 #include "mlir/IR/OpImplementation.h"
 
 #define GET_OP_CLASSES
-#include "Ragdoll/RagdollOps.cpp.inc"
+#include "Dialect/Ragdoll/RagdollOps.cpp.inc"

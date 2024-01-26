@@ -19,8 +19,7 @@
 #include "llvm/Support/SourceMgr.h"
 #include "llvm/Support/ToolOutputFile.h"
 
-#include "Ragdoll/RagdollDialect.h"
-#include "Ragdoll/RagdollOpsDialect.cpp.inc"
+#include "Dialect/Ragdoll/RagdollDialect.h"
 
 int main(int argc, char **argv) {
   mlir::registerAllPasses();

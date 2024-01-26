@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "Ragdoll/RagdollDialect.h"
-#include "Ragdoll/RagdollOps.h"
+#include "Dialect/Ragdoll/RagdollDialect.h"
+#include "Dialect/Ragdoll/RagdollOps.h"
 
 using namespace mlir;
 using namespace mlir::ragdoll;
@@ -16,9 +16,11 @@ using namespace mlir::ragdoll;
 // Ragdoll dialect.
 //===----------------------------------------------------------------------===//
 
+#include "Dialect/Ragdoll/RagdollDialect.cpp.inc"
+
 void RagdollDialect::initialize() {
   addOperations<
 #define GET_OP_LIST
-#include "Ragdoll/RagdollOps.cpp.inc"
+#include "Dialect/Ragdoll/RagdollOps.cpp.inc"
       >();
 }
