@@ -232,3 +232,4 @@ mechanisms:
    which apply to that software, or
 2) It will contain specific license and restriction terms at the top of every
    file. 
+This dialect template is made available under the Apache License 2.0 with LLVM Exceptions. See the `LICENSE.txt` file for more details.
