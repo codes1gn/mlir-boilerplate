@@ -1,1 +1,1 @@
-add_subdirectory(Ragdoll)
+add_subdirectory(Dialect)

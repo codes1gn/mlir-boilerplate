@@ -23,7 +23,7 @@ cmake --build . --target check-ragdoll
 where <ragdoll> is the nickname of basic module.
 
 To build the documentation from the TableGen description of the dialect
-operations, run:
+operations, run
 ```sh
 cmake --build . --target mlir-doc
 ```
