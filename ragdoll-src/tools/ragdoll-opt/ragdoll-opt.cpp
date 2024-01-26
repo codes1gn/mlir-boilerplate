@@ -20,19 +20,17 @@
 #include "llvm/Support/ToolOutputFile.h"
 
 #include "Dialect/Ragdoll/RagdollDialect.h"
+#include "Pipeline/Pipelines.h"
 
 int main(int argc, char **argv) {
-  mlir::registerAllPasses();
-  // TODO: Register ragdoll passes here.
-
   mlir::DialectRegistry registry;
-  registry.insert<mlir::ragdoll::RagdollDialect>();
-  registry.insert<mlir::func::FuncDialect>();
-  registry.insert<mlir::arith::ArithDialect>();
-  // Add the following to include *all* MLIR Core dialects, or selectively
-  // include what you need like above. You only need to register dialects that
-  // will be *parsed* by the tool, not the one generated
-  // registerAllDialects(registry);
+
+  // load MLIR builtin utility
+  mlir::registerAllDialects(registry);
+  mlir::registerAllPasses();
+
+  // load Ragdoll components
+  mlir::ragdoll::bootstrapRagdollCompiler(registry);
 
   return mlir::asMainReturnCode(
       mlir::MlirOptMain(argc, argv, "Ragdoll optimizer driver\n", registry));
